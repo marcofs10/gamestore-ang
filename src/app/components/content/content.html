@@ -1,0 +1,8 @@
+<div class="content">
+    <app-sidebar (filterByPlatform)="filterByPlatform($event)"></app-sidebar>
+    <div class="main">
+        <h1>Popular in store</h1>
+        <p>Based on player counts and ratings</p>
+        <app-gamesection [gameList]="gameList" (clearFilter)="clearFilter()" [filter]="filter"/>
+    </div>
+</div>

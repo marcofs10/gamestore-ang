@@ -1,0 +1,44 @@
+<div class="gameWrapper gameWrapperGrid" (mouseenter)="handleMouseEnter()" (mouseleave)="handleMouseLeave()">
+    <div class="game" [class.gameHover]="hovered">
+        <div class='wrapper' (mousemove)="handleThumbnailShown($event)">
+            <div class="thumbnail" [style.background-image]="'url(' + game.thumbnail[thumbnailShown] + ')'"></div>
+            <div [class.thumbnailSelector]="hovered">
+                <div [class.divActive]="thumbnailShown===0"></div>
+                <div [class.divActive]="thumbnailShown===1"></div>
+                <div [class.divActive]="thumbnailShown===2"></div>
+                <div [class.divActive]="thumbnailShown===3"></div>
+                <div [class.divActive]="thumbnailShown===4"></div>
+            </div>
+        </div>
+        <section class='info'>
+            <section class='details'>
+                <div class='platforms'>
+                    @for (icon of game.platforms.split(','); track icon){
+                    <app-icon-platform [icon]="icon"></app-icon-platform>
+                    }
+                </div>
+                <p class='price'>${{game.price}}</p>
+            </section>
+            <h2>{{game.name}}</h2>
+            @if (hovered){
+                <div>
+
+                    <ul>
+                        <li>
+                            <span>Score:</span>
+                            <span>{{game.rating}}</span>
+                        </li>
+                        <li>
+                            <span>Release Date:</span>
+                            <span>{{game.release}}</span>
+                        </li>
+                        <li>
+                            <span>Genres:</span>
+                            <span>{{game.genre}}</span>
+                        </li>
+                    </ul>
+                </div>
+            }
+        </section>
+    </div>
+</div>

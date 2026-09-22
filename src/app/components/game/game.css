@@ -1,0 +1,182 @@
+.gameWrapper{
+    position: relative;
+    min-width:10em;
+    border-radius: 12px;
+    min-height: 19vw;
+    max-width: 100%;
+    cursor: pointer;
+}
+.gameWrapperRow{
+    width: 100%;
+    min-height: 28.4vw;
+}
+
+.game{
+    width: 100%;
+    border-radius: inherit;
+    transition: transform 0.3s;
+    overflow: hidden;
+    background-color: #202020;
+    height: auto;
+    -webkit-user-drag: none;
+}
+.gameHover{
+    z-index: 6;
+    transform: scale(1.02);
+    height: auto;
+    position: absolute;
+}
+
+.wrapper{
+    padding-bottom: 67%;
+    position: relative;
+}
+
+.wrapper .thumbnail {
+    -webkit-user-drag: none;
+    position: absolute;
+    background-position: 50%;
+    width: 100%; 
+    height: 100%;
+    background-size: cover;
+}
+
+.thumbnailSelector{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 16px;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.thumbnailSelector>div{
+    width: 100%;
+    height: 3px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 4px;
+}
+
+.divActive{
+    background-color: rgba(255,255,255,1) !important;
+    transition: all 0.3s;
+}
+
+.game .info{
+    padding: 16px 16px 24px;
+    
+}
+
+.game .details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info>h2{
+    margin-bottom: 8px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info .details>p{
+    font-weight: 400;
+}
+
+.info>div>ul>li{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 0px;
+}
+
+.info>div>ul>li:first-of-type{
+    padding-top: 3%;
+}
+
+.info>div>ul>li:not(:last-of-type){
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.info>div>ul>li>span{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.info>div>ul>li>span:first-child{
+    color: rgba(255,255,255,0.6);
+}
+
+.wishIcon{
+    filter: invert(62%) sepia(0%) saturate(7287%) hue-rotate(72deg) brightness(81%) contrast(78%);
+    height: 20px;
+    cursor: pointer;
+    -webkit-user-drag: none;
+}
+
+.wishIcon:hover{
+    filter: invert(95%) sepia(93%) saturate(23%) hue-rotate(157deg) brightness(106%) contrast(70%);
+}
+
+.wishIconWanted{
+    filter: invert(79%) sepia(86%) saturate(3393%) hue-rotate(0deg) brightness(104%) contrast(102%) !important;
+}
+
+
+@media screen and (max-width:1438px){
+    .gameWrapperGrid{
+        min-height: 24vw;
+    }
+    .gameWrapperRow{
+        min-height: 28.75vw;
+    }
+}
+
+@media screen and (max-width:1160px){
+    .gameWrapperGrid{
+        min-height: 25vw;
+    }
+    .gameWrapperRow{
+        min-height: 30.2vw;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .gameWrapperGrid{
+        min-height: 34vw;
+    }
+    .gameWrapperRow{
+        min-height: 34.5vw;
+    }
+}
+
+@media screen and (max-width:858px){
+    .gameWrapperGrid{
+        min-height: 27em;
+    }
+    .gameWrapperRow{
+        min-height: 27em;
+    }
+}
+
+@media screen and (max-width:511px){
+    .gameWrapperGrid{
+        min-height: 85vw;
+    }
+    .gameWrapperRow{
+        min-height: 87vw;
+    }
+}
+
+@media screen and (max-width:388px){
+    .gameWrapperGrid{
+        min-height: 91.6vw;
+    }
+    .gameWrapperRow{
+        min-height: 88vw;
+    }
+}

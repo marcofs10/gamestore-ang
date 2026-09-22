@@ -1,0 +1,26 @@
+<div>
+    <div class="options">
+        <section class="filterContainer">
+            <button aria-label="Current Filter">
+                Filter by: <span>{{filter}}</span>
+            </button>
+            <button aria-label="Clear Filters" (click)="handleClear()">
+                Clear Filter
+            </button>
+        </section>
+        <section class="displayContainer">
+            <p>Display options:</p>
+            <button class="active" aria-label='Display grids'>
+                <img src={grid} />
+            </button>
+            <button class="active" aria-label='Display rows'>
+                <img src={list} />
+            </button>
+        </section>
+    </div>
+    <div class="gridContainer">
+        @for (game of gameList; track game.name){
+            <app-game [game]="game"/>
+        }
+    </div>
+</div>
