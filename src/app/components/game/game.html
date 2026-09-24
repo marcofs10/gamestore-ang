@@ -1,6 +1,11 @@
-<div class="gameWrapper gameWrapperGrid" (mouseenter)="handleMouseEnter()" (mouseleave)="handleMouseLeave()">
+<div class="gameWrapper" 
+    [class.gameWrapperRow]="row" 
+    [class.gameWrapperGrid]="!row"
+    (mouseenter)="handleMouseEnter()" 
+    (mouseleave)="handleMouseLeave()">
     <div class="game" [class.gameHover]="hovered">
-        <div class='wrapper' (mousemove)="handleThumbnailShown($event)">
+        <div class='wrapper' 
+            (mousemove)="handleThumbnailShown($event)">
             <div class="thumbnail" [style.background-image]="'url(' + game.thumbnail[thumbnailShown] + ')'"></div>
             <div [class.thumbnailSelector]="hovered">
                 <div [class.divActive]="thumbnailShown===0"></div>

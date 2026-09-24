@@ -12,8 +12,13 @@ export class Gamesection {
   @Input() gameList: GameModel[] = [];
   @Input() filter:string = ""
   @Output() clearFilter = new EventEmitter<void>()
+  active:boolean = true;
 
   handleClear(){
     this.clearFilter.emit()
+  }
+
+  handleLayoutSwitch(){
+    this.active = !this.active
   }
 }

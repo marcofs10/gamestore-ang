@@ -67,6 +67,9 @@
     grid-template-columns: repeat(4,1fr);
     gap: 24px;
 }
+.gridContainer > app-game {
+    min-width: 0;
+}
 
 .rowContainer{
     display: grid;

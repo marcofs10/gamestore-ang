@@ -4,23 +4,24 @@
             <button aria-label="Current Filter">
                 Filter by: <span>{{filter}}</span>
             </button>
-            <button aria-label="Clear Filters" (click)="handleClear()">
+            <button aria-label="Clear Filters" 
+                (click)="handleClear()">
                 Clear Filter
             </button>
         </section>
         <section class="displayContainer">
             <p>Display options:</p>
-            <button class="active" aria-label='Display grids'>
-                <img src={grid} />
+            <button [class.active]="active" aria-label='Display grids' (click)="handleLayoutSwitch()">
+                <img src="/icons/Grid.svg" />
             </button>
-            <button class="active" aria-label='Display rows'>
-                <img src={list} />
+            <button [class.active]="!active" aria-label='Display rows' (click)="handleLayoutSwitch()">
+                <img src="/icons/List.svg" />
             </button>
         </section>
     </div>
-    <div class="gridContainer">
+    <div [class.gridContainer]="active" [class.rowContainer]="!active">
         @for (game of gameList; track game.name){
-            <app-game [game]="game"/>
+            <app-game [game]="game" [row]="!active"/>
         }
     </div>
 </div>

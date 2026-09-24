@@ -10,6 +10,7 @@ import { IconPlatform } from '../icon-platform/icon-platform';
 })
 export class Game {
   @Input() game!: GameModel;
+  @Input() row: boolean = false
   hovered: boolean = false;
   thumbnailShown: number = 0
 
